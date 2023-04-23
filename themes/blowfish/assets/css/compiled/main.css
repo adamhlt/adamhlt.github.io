@@ -1068,7 +1068,7 @@ select {
   --tw-prose-quotes: rgba(var(--color-neutral-700), 1);
   --tw-prose-quote-borders: rgba(var(--color-primary-200), 1);
   --tw-prose-captions: rgba(var(--color-neutral-500), 1);
-  --tw-prose-code: rgba(var(--color-secondary-700), 1);
+  --tw-prose-code: #e63946;
   --tw-prose-pre-code: rgba(var(--color-neutral-700), 1);
   --tw-prose-pre-bg: rgba(var(--color-neutral-50), 1);
   --tw-prose-th-borders: rgba(var(--color-neutral-500), 1);
@@ -5321,7 +5321,7 @@ body:has(#menu-controller:checked) {
   --tw-prose-quotes: var(--tw-prose-invert-quotes);
   --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
   --tw-prose-captions: var(--tw-prose-invert-captions);
-  --tw-prose-code: var(--tw-prose-invert-code);
+  --tw-prose-code:  var(--tw-prose-links);
   --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
   --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
   --tw-prose-th-borders: var(--tw-prose-invert-th-borders);

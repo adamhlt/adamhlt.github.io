@@ -6,8 +6,12 @@ tags: [Game Hacking, Reverse Engineering]
 ---
 
 {{< lead >}}
-When life gives you lemons, make lemonade.
+I show you how to unpack Cube World, a game packed with Steam DRM, to make a cheat on it.
 {{< /lead >}}
+
+{{< alert cardColor="#e63946" iconColor="white" textColor="white">}}
+I don't give any information about game cracking, I have a legitimate version of Cube World (v1.0) on Steam and that's why I need to remove Steam DRM to analyze the game.
+{{< /alert >}}
 
 ## Why Cube World ?
 
@@ -30,7 +34,7 @@ Before starting reversing the game, we need some tools to do it :
 Some of these tools will be used only in this part of the reversing.
 The first thing we want to do is to load the game in IDA (or Ghidra).
 
-```
+```console
 [steam_path]\steamapps\common\Cube World\cubeworld.exe
 ```
 
@@ -78,7 +82,7 @@ As you can see it is very easy to unpack the game with [Steamless](https://githu
 ![New .text Section](https://cdn.devdojo.com/images/february2022/Capture%209.png)
 ![New Section Zoom](https://cdn.devdojo.com/images/february2022/Capture%209%20zoom.png)
 
-Presently every sections of the DRM have been removed, the ".text" section looks great, "nullsub" functions are gone and the analysis is way faster. The next step is to check if we can retrieve instructions from the debugger into IDA.
+Presently every sections of the DRM have been removed, the `.text` section looks great, "nullsub" functions are gone and the analysis is way faster. The next step is to check if we can retrieve instructions from the debugger into IDA.
 
 ## Debugging
 ### Use VEH debugger
@@ -88,7 +92,7 @@ The last step is to setup our environment, if you are trying to use Cheat Engine
 ![VEH](https://cdn.devdojo.com/images/february2022/Capture%2011.png)
 
 ### Retrieve instructions
-Finaly we can retrieve instructions from the debugger into IDA, since our game is x64 in IDA the base address is 0x140000000 so we just need to add the offset from Cheat Engine, so "cubeworld.exe+96579" is 0x140096579 in IDA.
+Finaly we can retrieve instructions from the debugger into IDA, since our game is x64 in IDA the base address is `0x140000000` so we just need to add the offset from Cheat Engine, so `cubeworld.exe+96579` is `0x140096579` in IDA.
 
 ![Cheat Engine](https://cdn.devdojo.com/images/february2022/Capture%2012.png)
 ![IDA Pro](https://cdn.devdojo.com/images/february2022/Capture%2013.png)
