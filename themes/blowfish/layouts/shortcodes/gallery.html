@@ -1,0 +1,16 @@
+{{ $time := now.UnixNano }}
+{{ $id := delimit (slice "gallery" $time) "-" }}
+
+<div id="{{ $id }}">
+  {{ .Inner }}
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#{{ $id }}').packery({
+      percentPosition: true,
+      gutter: 5,
+      resize: true
+    });
+  })
+</script>
