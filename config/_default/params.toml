@@ -91,9 +91,9 @@ defaultBackgroundImage = "img/bg2.jpg" # used as default for background images
   #excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
-  showTermCount = true
-  showHero = true
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showTermCount = false
+  showHero = false
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
