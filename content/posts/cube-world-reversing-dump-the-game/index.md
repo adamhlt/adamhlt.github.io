@@ -4,6 +4,8 @@ date: 2022-02-15T17:54:41+02:00
 draft: false
 tags: [Game Hacking, Reverse Engineering]
 summary: "How to unpack Cube World, a game packed with Steam DRM, to reverse it and make a cheat on it."
+series: ["Cube World Reversing"]
+series_order: 1
 ---
 
 {{< alert cardColor="#e63946" iconColor="white" textColor="white">}}

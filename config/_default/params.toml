@@ -93,13 +93,13 @@ defaultBackgroundImage = "img/bg2.jpg" # used as default for background images
 
 [taxonomy]
   showTermCount = false
-  showHero = false
-  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
   showTableOfContents = false
-  cardView = false
+  cardView = true
 
 [term]
   showHero = true
