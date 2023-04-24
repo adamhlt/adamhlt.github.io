@@ -37,8 +37,8 @@ defaultBackgroundImage = "img/bg2.jpg" # used as default for background images
   layout = "background" # valid options: page, profile, hero, card, background, custom
   #homepageImage = "IMAGE.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 5
-  showMoreLink = false
+  showRecentItems = 8
+  showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = false
   cardViewScreenWidth = false
@@ -88,7 +88,8 @@ defaultBackgroundImage = "img/bg2.jpg" # used as default for background images
   constrainItemsWidth = false
 
 [sitemap]
-  #excludedKinds = ["taxonomy", "term"]
+  #excludedKinds = ["series"]
+  #disableKinds = ["series"]
 
 [taxonomy]
   showTermCount = false
