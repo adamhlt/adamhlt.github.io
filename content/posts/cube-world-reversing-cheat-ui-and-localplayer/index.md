@@ -65,7 +65,7 @@ Previously we found an instruction which modify our health, with this logic the 
 
 > `cubeworld.exe + 0x2BEC30` in my case `0x1402BEC30`
 
-``` console
+```
 0x1402BEC23     movss   xmm0, dword ptr [r13+180h]
 0x1402BEC2C     subss   xmm0, xmm6  
 0x1402BEC30     movss   dword ptr [r13+180h], xmm0
@@ -77,7 +77,7 @@ Previously we found an instruction which modify our health, with this logic the 
 Now we just need to find in IDA Pro where the `R13` register / player is initialize in the function. We can see that the `R13` register is set at :
 > `cubeworld.exe + 0x2BB969` in my case `0x1402BB969`
 
-``` console
+```
 0x1402BB969     mov   r13, rdx
 ```
 **Decompilation :**
@@ -112,7 +112,7 @@ If the float located at `LocalPlayer + 0x3C` is positive the value of the `Z` ax
 
 The first parameter is in `RDI` because upper in the code `RCX` is moved into `RDI`, else as you can see `LocalPlayer` is set to `0x41200000` which is `10.0f` in hexadecimal. We can easily see how the `LocalPlayer` is retrieved by the game :
 
-``` console
+```
 mov     rax, [rdi+8]
 mov     rcx, [rax+448h]
 ```

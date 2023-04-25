@@ -32,7 +32,7 @@ Before starting to reverse the game, we need some tools to do it :
 Some of these tools will be used only in this part of the reversing.
 The first thing we want to do is to load the game in IDA (or Ghidra).
 
-```console
+```
 [steam_path]\steamapps\common\Cube World\cubeworld.exe
 ```
 
