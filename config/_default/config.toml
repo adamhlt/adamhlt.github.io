@@ -7,6 +7,9 @@
 defaultContentLanguage = "en"
 languageCode = "en"
 
+[params]
+  images = ['apple-touch-icon.png']
+
 [permalinks]
   posts = "/:title"
 
