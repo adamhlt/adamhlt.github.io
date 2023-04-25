@@ -8,16 +8,7 @@ defaultContentLanguage = "en"
 languageCode = "en"
 
 [params]
-<<<<<<< HEAD
   images = ['logo.png']
-
-=======
-<<<<<<< HEAD
-  images = ['logo.png']
-=======
-  images = ['apple-touch-icon.png']
->>>>>>> main
->>>>>>> main
 
 [permalinks]
   posts = "/:title"
