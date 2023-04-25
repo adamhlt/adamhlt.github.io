@@ -98,7 +98,7 @@
   {{ end }}
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ partial "twitter_custom.html" . }}
   {{/* Schema */}}
   {{ partial "schema.html" . }}
   {{/* Me */}}
