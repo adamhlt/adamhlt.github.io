@@ -7,6 +7,9 @@
 defaultContentLanguage = "en"
 languageCode = "en"
 
+[params]
+  images = ['logo.png']
+
 [permalinks]
   posts = "/:title"
 
