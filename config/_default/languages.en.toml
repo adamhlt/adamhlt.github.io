@@ -7,7 +7,7 @@ rtl = false
 
 title = "Adam Henault"
 logo = "img/dark.png"
-description = "My awesome website"
+description = "Hi, I'm Adam, a french Embedded System Security student, and here is my blog where I write content about : Reverse Engineering, Game Hacking, Hardware, Windows Internal..."
 copyright = "© 2023 Adam Henault"
 
 dateFormat = "2 January 2006"
@@ -16,7 +16,7 @@ dateFormat = "2 January 2006"
     name = "Adam Henault"
     image = "img/author.jpg"
     headline = "French Student, in Embedded System Security."
-    bio = "Hi, I'm Adam a french Embedded System Security student."
+    bio = "Hi, I'm Adam, a french Embedded System Security student."
     links = [    
     { email = "mailto:contact@adamhlt.com" },
     { telegram = "https://t.me/adamhlt" },
