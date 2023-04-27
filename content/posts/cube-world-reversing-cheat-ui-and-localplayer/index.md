@@ -11,7 +11,9 @@ series_order: 2
 ## Setup the UI
 The first thing we need to do is setup a menu for our cheat, the most common technique is to hook DirectX and integrate ImGui to make our menu. We can try this approach since Cube World use DirectX 11. 
 After trying differents techniques, the hook works but it brokes the Cube World rendering.
+
 ![Cube World ImGui](https://user-images.githubusercontent.com/48086737/234317926-5d3b1c6b-d3a1-4dba-8ce3-42b2267d87c2.png)
+
 As you can see we cannot use this technique to create our menu. 
 The second solution is to create a new window with DirectX 11 and integrate ImGui, the menu will be on an external window but the cheat is still internal.
 To do that I will use my [project](https://github.com/adamhlt/ImGui-Standalone) and compiled it as an DLL, you can look at the project, everything is setup and you just need to choose if you want to compile it as `DLL` or `EXE`.
@@ -31,24 +33,31 @@ In my opinion the best way to find the `LocalPlayer` is :
  3. Then subtract the health address with the health offset we find.
 
 So the first thing we need to do now is scanning for the health, in my case my character has `128hp`, you should be careful the health in Cube World is represented as `float`.
+
 ![Scan 1](https://user-images.githubusercontent.com/48086737/234318143-61d79161-e3c3-4377-8f2b-626271d3ba9e.png)
 
 Then I decrease my health with fall damage and I re-scan.
+
 ![Scan 2](https://user-images.githubusercontent.com/48086737/234318238-f30aee79-ccee-43d6-94f1-29529b069e90.png)
 
 Next I test the addresses by changing the value and find the good address.
+
 ![Scan 3](https://user-images.githubusercontent.com/48086737/234318277-0cd313c4-4778-4fab-b62f-e314a3b6d180.png)
 
 Now I attach the debugger to see what write to this address.
+
 ![Scan 4](https://user-images.githubusercontent.com/48086737/234318302-ae3d4add-d37a-46d5-b6be-8a5469b99556.png)
 
 After decrease my health again with fall damage we can see what write to the health address.
+
 ![Scan 5](https://user-images.githubusercontent.com/48086737/234318333-ba1ace65-67ba-4297-87a7-a32c8a7afee4.png)
 
 We got what write to the address, as you can see the `R13` register contain the address of the `LocalPlayer` and the offset of the health is `0x180`. I choose this instruction because after some investigation this correspond to the fall damage calculation and health decrease.
+
 ![Scan 7](https://user-images.githubusercontent.com/48086737/234318396-c3b94189-008f-4e75-850f-9ef7539fba53.png)
 
 Finally we got the `LocalPlayer` and the health address and offset.
+
 ![Scan 8](https://user-images.githubusercontent.com/48086737/234318425-0fde6666-7790-4427-b761-be56a6fd5136.png)
 
 Since the `LocalPlayer` address or health address are not static addresses we need to find a way to retrieve the `LocalPlayer` address at every game start. There are different techniques to do that like pointer scan, hook...
