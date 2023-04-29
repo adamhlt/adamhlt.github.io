@@ -31,8 +31,9 @@ Through this blog, I hope to share my ideas and experiences in the field of hard
 
 {{< timeline >}}
 
-{{< timelineItem icon="graduation" header="Master CSSE" badge="2022 - 2024" subheader="University UBS, Lorient, France" >}}
-The master degree is where I learned the most, the courses are about hardware security as well as software security. I could learn hardware description in VHDL, exploit development and reverse engineering. Moreover, a part of the courses is dedicated to the creation of Linux distributions and their security. This master is really complete and really allowed me to develop my skills.
+{{< timelineItem icon="graduation" header="Master CSSE" subheader="University UBS, Lorient, France" >}}
+<b>2022 / 2024</b><br><br>
+The master degree is where I learned the most, the courses are about hardware security as well as software security. I could learn hardware description in VHDL, exploit development and reverse engineering. Moreover, a part of the courses is dedicated to the creation of Linux distributions and their security. This master is really complete and really allowed me to develop my skills. <br>
 <h3>Skills</h3>
 <ul>
   <li>VHDL (FPGA in general)</li>
@@ -47,7 +48,8 @@ The master degree is where I learned the most, the courses are about hardware se
 {{< /timelineItem >}}
 
 
-{{< timelineItem icon="code" header="Internship - C++ Developer" badge="2021" subheader="University of Tours, Tours, France" >}}
+{{< timelineItem icon="code" header="Internship - C++ Developer" subheader="University of Tours, Tours, France" >}}
+<b>2021</b><br><br>
 I worked in the geology department of the university of Tours, my mission was to update a program for calculating nitrogen surpluses in soils to include phosphorus surplus calculations and the addition of new data.
 
 <h3>Skills</h3>
@@ -59,8 +61,9 @@ I worked in the geology department of the university of Tours, my mission was to
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation" header="Licence Computer Science" badge="2018 - 2021" subheader="University of Tours, Tours, France" >}}
-    These 3 years of computer science degree allowed me to really master programming languages like Java and C++. I was also able to discover databases (SQL, PostgreSQL) and web programming with PHP, HTML and CSS. Finally, I studied low-level computer science with computer architecture and operating systems.
+{{< timelineItem icon="graduation" header="Licence Computer Science" subheader="University of Tours, Tours, France" >}}
+<b>2018 / 2021</b><br><br>
+These 3 years of computer science degree allowed me to really master programming languages like Java and C++. I was also able to discover databases (SQL, PostgreSQL) and web programming with PHP, HTML and CSS. Finally, I studied low-level computer science with computer architecture and operating systems.
 {{< /timelineItem >}}
 
 {{< /timeline >}}
