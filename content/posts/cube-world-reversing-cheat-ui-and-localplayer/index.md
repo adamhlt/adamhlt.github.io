@@ -124,7 +124,7 @@ If the `float` at `LocalPlayer + 0x3C` is positive, the `Z axis` of the `LocalPl
 
 **Decompilation :**
 ``` cpp
-*(DWORD*)(*(QWORD*)(*(QWORD*)(first_parameter + 0x8) + 0x448) + 0x3C) = 10.0f;
+*(uint32_t*)(*(uint64_t*)(*(uint64_t*)(first_parameter + 0x8) + 0x448) + 0x3C) = 10.0f;
 ```
 
 With the code above we can easily analyse how the game retrieves the `LocalPlayer` and then puts it into the `RCX` register. Then make the character jump by setting the value at `RCX + 3C` to `0x41200000` which is `10.0f` in hexadecimal.
@@ -138,7 +138,7 @@ mov     rcx, [rax+448h]
 
 **Decompilation :**
 ``` cpp
-QWORD LocalPlayer = *(QWORD*)(*(QWORD*)(first_parameter + 0x8) + 0x448);
+uint64_t LocalPlayer = *(uint64_t*)(*(uint64_t*)(first_parameter + 0x8) + 0x448);
 ```
 
 As before we can try to get the `LocalPlayer` using a breakpoint in the `Cheat Engine` debugger.
