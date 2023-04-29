@@ -120,7 +120,7 @@ If the `float` at `LocalPlayer + 0x3C` is positive, the `Z axis` of the `LocalPl
 
 > `cubeworld.exe + 0x9D443` in `Cheat Engine` and `0x14009D443` in `IDA`
 
-![Jump 1](https://user-images.githubusercontent.com/48086737/234318870-3d7e24ac-9a2a-4da5-9720-8a866950ffc2.png "Instructions that make your character jump.")
+![Jump 1](https://user-images.githubusercontent.com/48086737/235326107-e2f120e4-6aba-4f56-a24b-ac1431a2c064.png "Instructions that make your character jump.")
 
 **Decompilation :**
 ``` cpp
