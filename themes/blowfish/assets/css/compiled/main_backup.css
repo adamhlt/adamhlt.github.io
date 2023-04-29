@@ -3966,7 +3966,9 @@ body:has(#menu-controller:checked) {
   position: static;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  color: #abb2bf; background-color: #282c34;
+  background-color: rgba(var(--color-neutral-50), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
 }
 
 :is(.dark .prose .chroma) {
@@ -4036,207 +4038,215 @@ body:has(#menu-controller:checked) {
   padding-top: 0px;
   padding-bottom: 0px;
   --tw-text-opacity: 1;
-  color: #55595f;
+  color: rgba(var(--color-neutral-600), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .lnt),:is(.dark 
 .chroma .ln) {
   --tw-text-opacity: 1;
-  color: #55595f;
+  color: rgba(var(--color-neutral-300), var(--tw-text-opacity));
 }
 
 /* Keyword */
 
-.chroma .k { color: #c678dd }
-:is(.dark .chroma .k) { color: #c678dd }
-
 /* KeywordDeclaration */
-
-.chroma .kd { color: #c678dd }
-:is(.dark .chroma .kd) { color: #c678dd }
 
 /* KeywordNamespace */
 
-.chroma .kn { color: #c678dd }
-:is(.dark .chroma .kn) { color: #c678dd }
-
 /* KeywordPseudo */
-
-.chroma .kp { color: #c678dd }
-:is(.dark .chroma .kp) { color: #c678dd }
 
 /* KeywordReserved */
 
-.chroma .kr { color: #c678dd }
-:is(.dark .chroma .kr) { color: #c678dd }
-
 /* NameClass */
-
-.chroma .nc { color: #e5c07b }
-:is(.dark .chroma .nc) { color: #e5c07b }
 
 /* NameFunctionMagic */
 
-.chroma .fm { color: #56b6c2; font-weight: bold }
-:is(.dark .chroma .fm) { color: #56b6c2; font-weight: bold }
-
 /* NameNamespace */
-
-.chroma .nn { color: #e06c75 }
-:is(.dark .chroma .nn) { color: #e06c75 }
 
 /* NameVariableClass */
 
-.chroma .vc { color: #e06c75 }
-:is(.dark .chroma .vc) { color: #e06c75 }
-
 /* Operator */
 
-.chroma .o { color: #56b6c2 }
-:is(.dark .chroma .o) { color: #56b6c2 }
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .nc,
+.chroma .fm,
+.chroma .nn,
+.chroma .vc,
+.chroma .o {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
+}
 
+:is(.dark .chroma .k),:is(.dark 
+.chroma .kd),:is(.dark 
+.chroma .kn),:is(.dark 
+.chroma .kp),:is(.dark 
+.chroma .kr),:is(.dark 
+.chroma .nc),:is(.dark 
+.chroma .fm),:is(.dark 
+.chroma .nn),:is(.dark 
+.chroma .vc),:is(.dark 
+.chroma .o) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
+}
 
 /* KeywordConstant */
 
 .chroma .kc {
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: #e5c07b;
+  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .kc) {
   --tw-text-opacity: 1;
-  color: #e5c07b;
+  color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
 
 /* KeywordType */
 
-.chroma .kt { color: #e5c07b }
-:is(.dark .chroma .kt) { color: #e5c07b }
-
 /* NameVariable */
-
-.chroma .nv { color: #e06c75  }
-:is(.dark .chroma .nv) { color: #e06c75 }
 
 /* NameVariableInstance */
 
-.chroma .vi { color: #e06c75 }
-:is(.dark .chroma .vi) { color: #e06c75 }
-
 /* NameVariableMagic */
-
-.chroma .vm { color: #e06c75 }
-:is(.dark .chroma .vm) { color: #e06c75 }
 
 /* LiteralNumber */
 
-.chroma .m { color: #d19a66 }
-:is(.dark .chroma .m) { color: #d19a66 }
-
 /* LiteralNumberBin */
-
-.chroma .mb { color: #d19a66 }
-:is(.dark .chroma .mb) { color: #d19a66 }
 
 /* LiteralNumberFloat */
 
-.chroma .mf { color: #d19a66 }
-:is(.dark .chroma .mf) { color: #d19a66 }
-
 /* LiteralNumberHex */
-
-.chroma .mh { color: #d19a66 }
-:is(.dark .chroma .mh) { color: #d19a66 }
 
 /* LiteralNumberInteger */
 
-.chroma .mi { color: #d19a66 }
-:is(.dark .chroma .mi) { color: #d19a66 }
-
 /* LiteralNumberIntegerLong */
-
-.chroma .il { color: #d19a66 }
-:is(.dark .chroma .il) { color: #d19a66 }
 
 /* LiteralNumberOct */
 
-.chroma .mo { color: #d19a66 }
-:is(.dark .chroma .mo) { color: #d19a66 }
+.chroma .kt,
+.chroma .nv,
+.chroma .vi,
+.chroma .vm,
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
+}
+
+:is(.dark .chroma .kt),:is(.dark 
+.chroma .nv),:is(.dark 
+.chroma .vi),:is(.dark 
+.chroma .vm),:is(.dark 
+.chroma .m),:is(.dark 
+.chroma .mb),:is(.dark 
+.chroma .mf),:is(.dark 
+.chroma .mh),:is(.dark 
+.chroma .mi),:is(.dark 
+.chroma .il),:is(.dark 
+.chroma .mo) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
+}
 
 /* Name */
 
-.chroma .n { color: #e06c75 }
-:is(.dark .chroma .n) { color: #e06c75 }
-
 /* NameDecorator */
-
-.chroma .nd { color: #e06c75 }
-:is(.dark .chroma .nd) { color: #e06c75 }
 
 /* NameEntity */
 
-.chroma .ni { color: #e06c75 }
-:is(.dark .chroma .ni) { color: #e06c75 }
-
 /* NameLabel */
 
-.chroma .nl { color: #e06c75 }
-:is(.dark .chroma .mo) { color: #e06c75 }
+.chroma .n,
+.chroma .nd,
+.chroma .ni,
+.chroma .nl {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-900), var(--tw-text-opacity));
+}
+
+:is(.dark .chroma .n),:is(.dark 
+.chroma .nd),:is(.dark 
+.chroma .ni),:is(.dark 
+.chroma .nl) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-200), var(--tw-text-opacity));
+}
 
 /* NameAttribute */
 
-.chroma .na { color: #e06c75 }
-:is(.dark .chroma .na) { color: #e06c75 }
-
 /* NameBuiltin */
-
-.chroma .nb { color: #e5c07b }
-:is(.dark .chroma .nb) { color: #e5c07b }
 
 /* NameBuiltinPseudo */
 
-.chroma .bp { color: #e06c75 }
-:is(.dark .chroma .bp) { color: #e06c75 }
-
 /* NameOther */
-
-.chroma .nx { color: #e06c75 }
-:is(.dark .chroma .nx) { color: #e06c75 }
 
 /* NameProperty */
 
-.chroma .py { color: #e06c75 }
-:is(.dark .chroma .py) { color: #e06c75 }
-
 /* NameTag */
 
-.chroma .nt { color: #e06c75 }
-:is(.dark .chroma .nt) { color: #e06c75 }
+.chroma .na,
+.chroma .nb,
+.chroma .bp,
+.chroma .nx,
+.chroma .py,
+.chroma .nt {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
+}
+
+:is(.dark .chroma .na),:is(.dark 
+.chroma .nb),:is(.dark 
+.chroma .bp),:is(.dark 
+.chroma .nx),:is(.dark 
+.chroma .py),:is(.dark 
+.chroma .nt) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
+}
 
 /* NameConstant */
 
-.chroma .no { color: #e06c75 }
-:is(.dark .chroma .no) { color: #e06c75 }
-
 /* NameException */
-
-.chroma .ne { color: #e06c75 }
-:is(.dark .chroma .ne) { color: #e06c75 }
 
 /* NameVariableGlobal */
 
-.chroma .vg { color: #e06c75 }
-:is(.dark .chroma .vg) { color: #e06c75 }
+.chroma .no,
+.chroma .ne,
+.chroma .vg {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
+}
+
+:is(.dark .chroma .no),:is(.dark 
+.chroma .ne),:is(.dark 
+.chroma .vg) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
+}
 
 /* NameFunction */
 
 .chroma .nf {
-  color: #61afef; font-weight: bold;
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .nf) {
-  color: #61afef; font-weight: bold;
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
 
 /* Literal */
@@ -4288,7 +4298,7 @@ body:has(#menu-controller:checked) {
 .chroma .go,
 .chroma .gp {
   --tw-text-opacity: 1;
-  color: #98c379;
+  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .l),:is(.dark 
@@ -4308,7 +4318,7 @@ body:has(#menu-controller:checked) {
 .chroma .go),:is(.dark 
 .chroma .gp) {
   --tw-text-opacity: 1;
-  color: #98c379;
+  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
 }
 
 /* LiteralStringEscape */
@@ -4362,6 +4372,10 @@ body:has(#menu-controller:checked) {
 
 /* CommentSpecial */
 
+/* CommentPreproc */
+
+/* CommentPreprocFile */
+
 .chroma .c,
 .chroma .cm,
 .chroma .c1,
@@ -4370,41 +4384,17 @@ body:has(#menu-controller:checked) {
 .chroma .cpf {
   font-style: italic;
   --tw-text-opacity: 1;
-  color: #7f848e;
+  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .c),:is(.dark 
 .chroma .cm),:is(.dark 
 .chroma .c1),:is(.dark 
-.chroma .cs) {
+.chroma .cs),:is(.dark 
+.chroma .cp),:is(.dark 
+.chroma .cpf) {
   --tw-text-opacity: 1;
-  color: #7f848e;
-}
-
-/* CommentPreproc */
-
-.chroma .cp {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: #c678dd;
-}
-
-:is(.dark .chroma .cp) {
-  --tw-text-opacity: 1;
-  color: #c678dd;
-}
-
-/* CommentPreprocFile */
-
-.chroma .cpf {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: #98c379;
-}
-
-:is(.dark .chroma .cpf) {
-  --tw-text-opacity: 1;
-  color: #98c379;
+  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
 }
 
 /* CommentHashbang */
@@ -4413,12 +4403,12 @@ body:has(#menu-controller:checked) {
   font-weight: 600;
   font-style: italic;
   --tw-text-opacity: 1;
-  color: #7f848e;
+  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
 
 :is(.dark .chroma .ch) {
   --tw-text-opacity: 1;
-  color: #7f848e;
+  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
 }
 
 /* GenericEmph */
