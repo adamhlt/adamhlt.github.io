@@ -61,7 +61,7 @@ So the first thing to do is to use `PE Bear` and `Detect It Easy`, `PE Bear` hel
 
 ![Steam Stub](https://user-images.githubusercontent.com/48086737/234103414-5baef205-7c17-4e98-b0f3-8f13e9f7bc23.png "`Detect It Easy` identifies the packer as `Steam stub`.")
 
-With `Detect It Easy`, we can now confirm that the game is packed with Steam DRM. So, to make our cheat and reverse the game, we need to unpack it first.
+With `Detect It Easy`, we can now confirm that the game is packed with `Steam DRM`. So, to reverse the game and make our cheat, we need to unpack it first.
 
 ## Unpack the game
 
