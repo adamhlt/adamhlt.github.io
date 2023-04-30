@@ -1,0 +1,44 @@
+{{- $githubData := getJSON (print "https://api.github.com/gists/" (.Get "repo")) -}}
+{{- $githubColors := .Site.Data.githubColors -}}
+{{- with $githubData -}}
+
+{{ $languages := slice }}
+{{ with .files }}
+  {{ range $key, $value := . }}
+    {{ $language := $value.language }}
+    {{ if and (ne $language nil) (not (in $languages $language)) }}
+      {{ $languages = $languages | append (slice $language) | uniq }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<a target="_blank" href="{{ .html_url }}" class="cursor-pointer">
+  <div class="w-full md:w-auto pt-3 p-5 border border-neutral-200 dark:border-neutral-700 border rounded-md backdrop-blur shadow-2xl">
+
+    <div class="flex items-center">
+      <span class="text-2xl text-neutral-800 dark:text-neutral" style="margin-right:10px;">
+        {{ partial "icon.html" "github" }}
+      </span>
+      <div class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
+        Github Gist • {{ .owner.login | markdownify | emojify }}
+      </div>
+    </div>
+
+    <p class="m-0 mt-2 text-md text-neutral-800 dark:text-neutral">
+      {{ .description | markdownify | emojify }}
+    </p>
+
+    <div class="m-0 mt-2 flex items-center">
+      
+      {{ range $languages }}
+        <span class="mr-1 inline-block h-3 w-3 rounded-full" style="background-color: {{ if . }} {{- index $githubColors . -}} {{ else }} #0077b6 {{ end }}"></span>
+        <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+          {{ . }}
+        </div>
+      {{ end }}
+
+    </div>
+
+  </div>
+</a>
+{{- end -}}
