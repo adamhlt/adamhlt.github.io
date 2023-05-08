@@ -1,7 +1,7 @@
 ---
 title: "LiteX - Add JTAG PHY interface to VexRiscV CPU"
 date: 2023-02-23T17:54:41+02:00
-draft: true
+draft: false
 tags: [Hardware, LiteX, FPGA]
 summary: "How to add a JTAG PHY interface to a VexRiscV CPU in the LiteX SoC generator and debug the CPU with OpenOCD and GDB."
 ---
