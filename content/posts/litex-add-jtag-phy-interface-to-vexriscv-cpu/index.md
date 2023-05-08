@@ -377,5 +377,7 @@ Finally, you can run the script, if everything goes well you will not get any er
 ## Resources
 
 {{< github repo="SpinalHDL/openocd_riscv" >}}
+
 <br>
+
 {{< github repo="enjoy-digital/litex" >}}
