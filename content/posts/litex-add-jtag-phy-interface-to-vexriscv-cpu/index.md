@@ -354,6 +354,8 @@ Now you can build the SoC with the `JTAG` interface with the following command:
 ./digilent_basys3.py --cpu-variant=full+jtag --build
 ```
 
+![Build Log](https://user-images.githubusercontent.com/48086737/236834622-98437ce6-5912-41da-b3a4-858480e778c9.png "Build of the LiteX SoC")
+
 After you have built your SoC you can retrieve the `.yaml` file of the CPU configuration, this file is in the same place as the `Verilog` file of the CPU. Then download the script to connect to the `JTAG` interface of the CPU using `OpenOCD`.
 
 {{< github_gist repo="d06306e520f3f2ae46e8c3aa08a40dd6" >}}
@@ -365,6 +367,12 @@ You have to make sure that the script matches your configuration and the JTAG de
 {{< /alert >}}
 
 Finally, you can run the script, if everything goes well you will not get any errors and you can open a connection with `GDB`.
+
+![Basys3](https://user-images.githubusercontent.com/48086737/236834803-c10fa757-526d-47ac-8a72-15c5be73dee6.png "Basys3 and Digilent HS2 setup.")
+
+<img width="1150" alt="Capture d’écran 2023-05-08 à 14 37 53" src="">
+
+![OpenOCD](https://user-images.githubusercontent.com/48086737/236834943-93e955f9-da30-472b-bd62-a308c1dbcf89.png "OpenOCD connection ready for debug.")
 
 ## Resources
 
