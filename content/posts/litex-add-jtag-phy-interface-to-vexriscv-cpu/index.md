@@ -198,7 +198,173 @@ You can find the whole source code available on my Github Gist.
 
 Since we have now generated the `Verilog` file of the new variant, we need to integrate it into the `LiteX SoC Generator`, to do this we need to go to the file `litex/litex/soc/cores/cpu/vexriscv/core.py`. This file describes how to integrate the `VexRiscV CPU` variants into the `SoC`, we will modify the CPU connections to connect the `JTAG` interface.
 
+First, we will add a new variant to use the correct CPU `Verilog` file. To do this we will add 1 new entry to the list of variants, `CPU_VARIANTS` and also to the list of compiler parameters, `GCC_FLAGS`. Since our new variant is based on the `full` variant we will call our variant `full+jtag` to recognise it. Finally we come to use the same compiler parameters as the `full` variant.
+
+```python
+...
+
+CPU_VARIANTS = {
+    
+    ...
+
+    "secure":             "VexRiscv_Secure",
+    "secure+debug":       "VexRiscv_SecureDebug",
+    "full+jtag":          "VexRiscv_JTAG",
+    # The line above specifies which Verilog file to use.
+}
+
+# GCC Flags ----------------------------------------------------------------------------------------
+
+GCC_FLAGS = {
+    
+    ...
+
+    "secure":           "-march=rv32i2p0_ma    -mabi=ilp32",
+    "secure+debug":     "-march=rv32i2p0_ma    -mabi=ilp32",
+    "full+jtag":        "-march=rv32i2p0_m     -mabi=ilp32", 
+    # The line above specifies the GCC compilation parameters.
+}
+
+...
+```
+
+Finally, we need to add the connection of the `JTAG` signals to the rest of the `SoC`. To do this we will detect the presence of the keyword `jtag` in the variant name and then call a function that will connect the signals correctly.
+
+```python
+...
+
+        # Add Timer (Optional).
+        if with_timer:
+            self.add_timer()
+
+        # Add Debug (Optional).
+        if "debug" in variant:
+            self.add_debug()
+
+        if "jtag" in variant:
+            self.add_jtag()
+
+    def set_reset_address(self, reset_address):
+        self.reset_address = reset_address
+        self.cpu_params.update(i_externalResetVector=Signal(32, reset=reset_address))
+...
+```
+
+```python
+...
+
+            o_debug_bus_cmd_ready           = self.o_cmd_ready,
+            o_debug_bus_rsp_data            = self.o_rsp_data,
+            o_debug_resetOut                = self.o_resetOut
+        )
+
+    def add_jtag(self):
+        debug_reset = Signal()
+
+        self.i_jtag_tdi = Signal()
+        self.i_jtag_tms = Signal()
+        self.i_jtag_tck = Signal()
+        self.o_jtag_tdo = Signal()
+        self.o_resetOut = Signal()
+
+        reset_debug_logic = Signal()
+
+        self.sync += debug_reset.eq(reset_debug_logic | ResetSignal())
+    
+        self.cpu_params.update(
+            i_reset = ResetSignal() | self.reset | debug_reset,
+            i_debugReset     = ResetSignal(),
+            i_jtag_tdi       = self.i_jtag_tdi,
+            i_jtag_tms       = self.i_jtag_tms,
+            i_jtag_tck       = self.i_jtag_tck,
+            o_jtag_tdo       = self.o_jtag_tdo,
+            o_debug_resetOut = self.o_resetOut
+        )
+
+
+    def add_cfu(self, cfu_filename):
+        # Check CFU presence.
+        if not os.path.exists(cfu_filename):
+
+...
+```
+
+You can find the whole modified `core.py` file on the Github Gist.
+
+{{< github_gist repo="a977819c6b77cc1d5c784361025c8313" >}}
+
+## Connect the JTAG interface
+
+Everything is now ready, all that is left to do is to create a simple `Migen` component to connect the `JTAG` interface to the `IOs` on the FPGA board, to allow us to use a `JTAG` debugger.
+
+We can now create the new component `jtag_phy.py` in the folder `litex/litex/soc/cores`. This component is just to connect the `JTAG` interface to the pins of the board we will declare in the `platform` file.
+
+Here is the component `jtag_phy.py` :
+
+```python
+from migen import *
+
+class JTAG(Module):
+    def __init__(self, soc, pads):
+            
+        # Connect JTAG interface for VexRiscV
+        # Check if the VexRiscV CPU has a JTAG interface
+        if(soc.cpu_type is "vexriscv" and soc.cpu_variant is not None and "jtag" in soc.cpu_variant):
+            
+            # Connect the JTAG interface of the CPU to the GPIOs
+            self.comb += [
+                soc.cpu.cpu_params["i_jtag_tdi"].eq(pads.tdi),
+                soc.cpu.cpu_params["i_jtag_tms"].eq(pads.tms),
+                soc.cpu.cpu_params["i_jtag_tck"].eq(pads.tck),
+                pads.tdo.eq(soc.cpu.cpu_params["o_jtag_tdo"])
+            ]
+
+            return
+```
+
+You must also modify the `platform` file of your card to add the `JTAG` pins, here is an example for the `Basys3` board :
+
+```python
+("jtag", 0,
+    Subsignal("tms", Pins("J1")),
+    Subsignal("tdi", Pins("L2")),
+    Subsignal("tdo", Pins("J2")),
+    Subsignal("tck", Pins("G2")),
+    IOStandard("LVCMOS33"),
+),
+```
+
+Finally you can import the component in the `target` file like this: `from litex.soc.cores.jtag_phy import JTAG` and connect the interface by adding a submodule: `self.submodules.jtag = JTAG(self, platform.request("jtag"))`. You can find the whole source code on the Github Gist.
+
+{{< alert cardColor="#d86c46" iconColor="#f1faee" textColor="#f1faee" >}}
+Don't forget to add the following line into the target file to avoid error about clock route.
+{{< /alert >}}
+
+```python
+platform.add_platform_command("set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets jtag_tck_IBUF]")
+```
+
 {{< github_gist repo="07d663b7c96ce71492e6fbd71ba13574" >}}
+
+## Build the SoC and debug the CPU
+
+Now you can build the SoC with the `JTAG` interface with the following command: 
+
+```console
+./digilent_basys3.py --cpu-variant=full+jtag --build
+```
+
+After you have built your SoC you can retrieve the `.yaml` file of the CPU configuration, this file is in the same place as the `Verilog` file of the CPU. Then download the script to connect to the `JTAG` interface of the CPU using `OpenOCD`.
+
+{{< github_gist repo="d06306e520f3f2ae46e8c3aa08a40dd6" >}}
+
+<br>
+
+{{< alert >}}
+You have to make sure that the script matches your configuration and the JTAG debugger you are using. In my case I use a **Digilent HS2**.
+{{< /alert >}}
+
+Finally, you can run the script, if everything goes well you will not get any errors and you can open a connection with `GDB`.
 
 ## Resources
 
