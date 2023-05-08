@@ -370,8 +370,6 @@ Finally, you can run the script, if everything goes well you will not get any er
 
 ![Basys3](https://user-images.githubusercontent.com/48086737/236834803-c10fa757-526d-47ac-8a72-15c5be73dee6.png "Basys3 and Digilent HS2 setup.")
 
-<img width="1150" alt="Capture d’écran 2023-05-08 à 14 37 53" src="">
-
 ![OpenOCD](https://user-images.githubusercontent.com/48086737/236834943-93e955f9-da30-472b-bd62-a308c1dbcf89.png "OpenOCD connection ready for debug.")
 
 ## Resources
