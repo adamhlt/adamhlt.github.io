@@ -16,3 +16,6 @@ I will present my analysis and solution for the first challenge of the 2015 `Fla
 
 Since this is the first challenge in the series, it is likely to be the easiest. Still, it is interesting to see if the executable is packed. To check we will use `Detect It Easy` to see if the software detects a packer and take a look at the `entropy` of the `PE` file data.
 
+![Detect It Easy Analysis](https://user-images.githubusercontent.com/48086737/236915927-94ce6530-1fe3-40fa-b64f-ba92eaeb943b.png "The `Detect It Easy` analysis do not return a packer.")
+
+![Detect It Easy Analysis 2](https://user-images.githubusercontent.com/48086737/236916390-0e9963ae-8abb-458e-a08e-32f843b06ef7.png "The analysis show a low entropy")
