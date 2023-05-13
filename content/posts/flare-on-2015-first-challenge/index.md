@@ -23,4 +23,4 @@ Since this is the first challenge in the series, it is likely to be the easiest.
 ![Capture5](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/0a7ef483-2503-4d8b-b050-840595a989df)
 ![Capture6](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/c37f5bf8-486a-47c3-aef8-6156219eeba9)
 ![Capture7](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/34507c69-d3d8-4265-a15d-5140206f653a)
-![Capture8](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/458426b7-3641-4413-9cdf-662b41cfb230)
+![Capture8](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/54fbd4ab-ff03-4d80-b168-c7509765ade5)
