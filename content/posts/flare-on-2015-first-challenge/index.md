@@ -16,6 +16,11 @@ I will present my analysis and solution for the first challenge of the 2015 `Fla
 
 Since this is the first challenge in the series, it is likely to be the easiest. Still, it is interesting to see if the executable is packed. To check we will use `Detect It Easy` to see if the software detects a packer and take a look at the `entropy` of the `PE` file data.
 
-![Detect It Easy Analysis](https://user-images.githubusercontent.com/48086737/236915927-94ce6530-1fe3-40fa-b64f-ba92eaeb943b.png "The `Detect It Easy` analysis do not return a packer.")
-
-![Detect It Easy Analysis 2](https://user-images.githubusercontent.com/48086737/236916390-0e9963ae-8abb-458e-a08e-32f843b06ef7.png "The analysis show a low entropy.")
+![Capture1](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/058f27a3-dbac-4408-8995-e7ee12d695e5)
+![Capture2](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/68f6a919-991c-48e4-94d6-63dd7acbcf64)
+![Capture3](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/6e24771c-44ca-4106-95e4-b5e95d011567)
+![Capture4](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/2ed375ef-ee89-430f-858b-3b6e132f4b85)
+![Capture5](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/0a7ef483-2503-4d8b-b050-840595a989df)
+![Capture6](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/c37f5bf8-486a-47c3-aef8-6156219eeba9)
+![Capture7](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/34507c69-d3d8-4265-a15d-5140206f653a)
+![Capture8](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/458426b7-3641-4413-9cdf-662b41cfb230)
