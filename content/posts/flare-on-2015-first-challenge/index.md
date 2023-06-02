@@ -1,7 +1,7 @@
 ---
 title: "Flare On 2015 - 0x1 First challenge writeup"
 date: 2023-05-08T16:20:41+02:00
-draft: True
+draft: False
 tags: [Reverse Engineering, Flare On]
 summary: "This is the walkthrough of the first challenge in the Flare On 2015 series, how to solve the challenge using IDA Pro and Python."
 ---
@@ -101,5 +101,7 @@ result_string = bytes_to_string(result)
 
 print(result_string)
 ```
+
+![Resolving the challenge](https://github.com/adamhlt/adamhlt.github.io/assets/48086737/23834431-1059-4305-a615-ad827f888ffc "Resolving the challenge using the Python script")
 
 We were able to recover the correct password and successfully complete the challenge.
