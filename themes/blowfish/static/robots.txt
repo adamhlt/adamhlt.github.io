@@ -2,4 +2,5 @@ robots.txt
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
+Disallow: /img/bg2.jpg
 Sitemap: https://adamhlt.com/sitemap.xml
