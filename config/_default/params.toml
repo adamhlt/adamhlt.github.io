@@ -17,7 +17,7 @@ enableCodeCopy = true
 
 disableImageOptimization = false
 
-defaultBackgroundImage = "img/bg2.jpg" # used as default for background images 
+defaultBackgroundImage = "img/bg4.jpg" # used as default for background images 
 
 # highlightCurrentMenuArea = true
 # smartTOC = true
