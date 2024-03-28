@@ -31,6 +31,32 @@ Through this blog, I hope to share my ideas and experiences in the field of hard
 
 {{< timeline >}}
 
+{{< timelineItem icon="code" header="Master 2 Internship" subheader="Lab-STICC, Lorient, France" >}}
+<b>2024</b><br><br>
+My work involved evaluating the memory footprint of embedded software for an FPGA with strong constraints. The aim was to optimise the software in Baremetal and on FreeRTOS. <br>
+<h3>Skills</h3>
+<ul>
+  <li>FPGA Develoment</li>
+  <li>FPGA Toolchain</li>
+  <li>Embedded software</li>
+  <li>Low-level programming</li>
+  <li>RTOS</li>
+</ul>
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Master 1 Internship" subheader="Lab-STICC, Lorient, France" >}}
+<b>2023</b><br><br>
+I worked on the design of a fault emulation tool designed to test the robustness of SoCs on FPGAs. The tool had to be as modular as possible and incorporate a complex trigger system with several fault models. Several proofs of concept were carried out on different systems: Baremetal, Linux, etc. <br>
+<h3>Skills</h3>
+<ul>
+  <li>FPGA Develoment</li>
+  <li>FPGA Toolchain</li>
+  <li>Fault injection emulation</li>
+  <li>Python</li>
+  <li>Migen</li>
+</ul>
+{{< /timelineItem >}}
+
 {{< timelineItem icon="graduation" header="Master CSSE" subheader="University UBS, Lorient, France" >}}
 <b>2022 / 2024</b><br><br>
 The master degree is where I learned the most, the courses are about hardware security as well as software security. I could learn hardware description in VHDL, exploit development and reverse engineering. Moreover, a part of the courses is dedicated to the creation of Linux distributions and their security. This master is really complete and really allowed me to develop my skills. <br>
