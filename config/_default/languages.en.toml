@@ -8,7 +8,7 @@ rtl = false
 title = "Adam Henault"
 logo = "img/dark.png"
 description = "Hi, I'm Adam, a French Embedded System Security student, and here is my blog where I write content about : Reverse Engineering, Game Hacking, Hardware, Windows Internal..."
-copyright = "© 2023 Adam Henault"
+copyright = "© 2024 Adam Henault"
 
 dateFormat = "2 January 2006"
 
@@ -22,6 +22,7 @@ dateFormat = "2 January 2006"
     { telegram = "https://t.me/adamhlt" },
     { github = "https://github.com/adamhlt" },
     { linkedin = "https://linkedin.com/in/adamhlt" },
+    { stack-overflow = "https://stackoverflow.com/users/12888292/adam-henault" },
 #     { dribbble = "https://dribbble.com/username" },
 #     { facebook = "https://facebook.com/username" },
 #     { flickr = "https://www.flickr.com/photos/username/" },
