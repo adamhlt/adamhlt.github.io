@@ -1,0 +1,20 @@
+{{$span := .Get "span" | default 6}}
+{{$src := .Get "src" | default ""}}
+{{$muted := .Get "muted" | default "false"}}
+{{$autoplay := .Get "autoplay" | default "false"}}
+{{$loop := .Get "loop" | default "false"}}
+{{$poster := .Get "poster" | default ""}}
+{{$srcContainsStatic := strings.Contains $src "/static"}}
+{{$posterContainsStatic := strings.Contains $poster "/static"}}
+{{if eq $srcContainsStatic true}}
+{{$src = replace $src "/static/" "/"}}
+{{end}}
+{{if eq $posterContainsStatic true}}
+{{$poster = replace $poster "/static/" "/"  }}
+{{end}}
+
+<div class="span-{{$span}}">
+    <video {{if ne $poster ""}}poster="{{site.BaseURL}}{{$poster}}"{{end}} {{if eq $loop "true"}}loop{{end}} {{if eq $autoplay "true"}}autoplay{{end}} {{if eq $muted "true"}}muted{{end}} controls>
+        <source src="{{$src}}"></source>
+    </video>
+</div>
