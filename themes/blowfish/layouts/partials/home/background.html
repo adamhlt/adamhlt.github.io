@@ -23,12 +23,12 @@
                     {{ with .Site.Author.image }}
                     {{ $authorImage := resources.Get . }}
                     {{ if $authorImage }}
-                    {{ $authorImage := $authorImage.Fill "288x288" }}
-                    <img class="mb-2 rounded-full h-36 w-36" width="144" height="144"
+                    {{ $authorImage := $authorImage.Fill "1000x1000" }}
+                    <img class="mb-2 rounded-full h-37 w-37" width="200" height="200"
                         alt="{{ $.Site.Author.name | default " Author" }}" src="{{ $authorImage.RelPermalink }}" />
                     {{ end }}
                     {{ end }}
-                    <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-100">
+                    <h1 class="mb-2 mt-4 text-4xl font-extrabold text-neutral-800 dark:text-neutral-100">
                         {{ .Site.Author.name | default .Site.Title }}
                     </h1>
                     {{ with .Site.Author.headline }}
