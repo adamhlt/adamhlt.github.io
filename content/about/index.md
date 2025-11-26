@@ -19,13 +19,38 @@ showLikes: false
 showAuthor: true
 layoutBackgroundHeaderSpace: false
 
-summary: "Hi, I'm Adam, a French Embedded System Security student, and here is my blog where I write content about : Reverse Engineering, Game Hacking, Hardware, Windows Internal..."
+summary: "Hi, I'm Adam, a French PhD student in Embedded System Security, and here is my blog where I write content about : Reverse Engineering, Game Hacking, Hardware, Windows Internal..."
 
 ---
 
-Hello and welcome to my blog ! My name is Adam and I'm a French Hardware Cybersecurity student. I have a great passion for exploring the world of hardware security and cybersecurity in general, I love diving into the intricate details of various systems and devices. As an reverse engineer enthusiast, I enjoy unravelling the intricacies of various software and hardware components, which has led me to game hacking, CTFs, Windows internals, and hardware such as FPGAs.
+Hello and welcome to my blog ! My name is Adam and I'm a French PhD student in Hardware Cybersecurity. I have a great passion for exploring the world of hardware security and cybersecurity in general, I love diving into the intricate details of various systems and devices. As an reverse engineer enthusiast, I enjoy unravelling the intricacies of various software and hardware components, which has led me to game hacking, CTFs, Windows internals, and hardware such as FPGAs.
 
 Through this blog, I hope to share my ideas and experiences in the field of hardware security and provide readers with valuable knowledge on the various topics I cover. Whether you are an enthusiast or simply curious about the world of cybersecurity, I invite you to join me on this journey of exploration and discovery. Thank you for visiting my blog and I hope you enjoy the content !
+
+<h1 class="mt-0 text-4xl font-bold text-neutral-900 dark:text-neutral">Events</h1>
+
+{{< timeline >}}
+
+{{< timelineItem icon="graduation" header="BTIFLIP (ECW) 2025" subheader="Rennes, France" >}}
+I talked about the work I had done on using Hardware Performance Counters to find attacks on software. Next, we investigate how filtering HPC can enhance a detector's detection capabilities and lessen its complexity.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation" header="DSD 2025" subheader="Salerno, Italy" >}}
+I had the opportunity to present my Master's project, <a href="https://github.com/labsticc-arcad/LiteInjector">LiteInjector</a>, at the DSD 2025 conference. With LiteInjector, you can simulate fault injection attacks directly on an FPGA board. incredibly helpful for increasing the speed of your fault injection campaigns.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="JAIF 2024" subheader="Rennes, France" >}}
+I introduced our open-source framework, LiteInjector, which allows you to directly simulate fault injection attacks on an FPGA board.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="SSTIC 2024" subheader="Rennes, France" >}}
+I introduced our open-source framework, which enables the development of a CTF platform for hardware vulnerabilities challenges. In the hardware description of certain IPs, we automatically insert bugs using the LiteX framework.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Winner CSAW ESC 2023" subheader="Valence, France" >}}
+In 2023, my team emerged victorious in the CSAW ESC CTF. The CTF focuses on embedded system security. All of the CTF solutions are available on my GitHub.
+{{< /timelineItem >}}
+{{< /timeline >}}
 
 <h1 class="mt-0 text-4xl font-bold text-neutral-900 dark:text-neutral">Experiences</h1>
 
@@ -78,6 +103,11 @@ I worked in the geology department of the university of Tours, my mission was to
 <h1 class="mt-0 text-4xl font-bold text-neutral-900 dark:text-neutral">Studies</h1>
 
 {{< timeline >}}
+
+{{< timelineItem icon="graduation" header="Hardware Security PhD" subheader="Lab-STICC, University UBS, Lorient, France" >}}
+<b>2024 / 2027</b><br><br>
+My doctoral research is focused on the identification of hardware and software attacks by utilizing data from the entire System on Chips. on chips. We commence by utilizing Hardware Performance Counters to detect software attacks. We then explore how filtering HPC can reduce the complexity of a detector and improve its detection capabilities.
+{{< /timelineItem >}}
 
 {{< timelineItem icon="graduation" header="Master CSSE" subheader="University UBS, Lorient, France" >}}
 <b>2022 / 2024</b><br><br>
